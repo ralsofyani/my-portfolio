@@ -1,0 +1,36 @@
+{% from "macros.html" import icon, section_head %}
+<section id="troubleshooting" class="section section-tinted troubleshooting-section">
+  <div class="container">
+    {{ section_head('troubleshooting', c) }}
+
+    {# ✏️ Text: ar.json / en.json → troubleshooting #}
+    <div class="flow-head reveal">
+      <h4 class="mini-title" data-i18n="troubleshooting.flow_title">{{ c.troubleshooting.flow_title }}</h4>
+      <p class="flow-note" data-i18n="troubleshooting.flow_note">{{ c.troubleshooting.flow_note }}</p>
+    </div>
+    <ol class="steps trace-flow">
+      {% for f in c.troubleshooting.flow %}
+      <li class="step reveal">
+        <span class="step-num">{{ loop.index }}</span>
+        <h3 data-i18n="troubleshooting.flow.{{ loop.index0 }}.title">{{ f.title }}</h3>
+        <p data-i18n="troubleshooting.flow.{{ loop.index0 }}.text">{{ f.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <h4 class="mini-title reveal tools-title" data-i18n="troubleshooting.tools_title">{{ c.troubleshooting.tools_title }}</h4>
+    <div class="tools">
+      {% set tool_icons = ['bug', 'search', 'pulse', 'box'] %}
+      {% for t in c.troubleshooting.tools %}
+      {% set i = loop.index0 %}
+      <article class="card tool reveal">
+        <span class="tool-icon">{{ icon(tool_icons[i] if i < 4 else 'api') }}</span>
+        <div>
+          <h3 dir="ltr" data-i18n="troubleshooting.tools.{{ i }}.name">{{ t.name }}</h3>
+          <p data-i18n="troubleshooting.tools.{{ i }}.text">{{ t.text }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

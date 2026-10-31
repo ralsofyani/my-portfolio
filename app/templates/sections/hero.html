@@ -1,0 +1,24 @@
+<section id="hero" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow reveal">
+        <span data-i18n="hero.eyebrow">{{ c.hero.eyebrow }}</span>
+        <span class="eyebrow-name" data-i18n="name">{{ c.name }}</span>
+      </p>
+      <p class="hero-role reveal" data-i18n="hero.role">{{ c.hero.role }}</p>
+      <h1 class="hero-title reveal" data-i18n="hero.title">{{ c.hero.title }}</h1>
+      <p class="hero-sub reveal" data-i18n="hero.subtitle">{{ c.hero.subtitle }}</p>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="portrait">
+        {# 🖼 Replace: site.json → images.profile #}
+        <img src="{{ site.images.profile }}" alt="{{ c.hero.image_alt }}" data-i18n-alt="hero.image_alt" width="420" height="500">
+      </div>
+      {% for b in c.hero.badges %}
+      <span class="sticker s{{ loop.index }}" data-i18n="hero.badges.{{ loop.index0 }}">{{ b }}</span>
+      {% endfor %}
+      <svg class="doodle-ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 9" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</section>

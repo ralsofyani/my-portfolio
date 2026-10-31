@@ -1,0 +1,36 @@
+{% from "macros.html" import icon %}
+<section id="contact" class="section">
+  <div class="container">
+    {# ✏️ "Me, in short" cards: ar.json / en.json → contact.facts #}
+    <h4 class="mini-title facts-title reveal" data-i18n="contact.facts_title">{{ c.contact.facts_title }}</h4>
+    <div class="facts contact-facts">
+      {% for f in c.contact.facts %}
+      <article class="fact card reveal tint-{{ loop.index }}">
+        <span class="fact-label" data-i18n="contact.facts.{{ loop.index0 }}.label">{{ f.label }}</span>
+        <p data-i18n="contact.facts.{{ loop.index0 }}.text">{{ f.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="contact-card reveal">
+      <span class="kicker" data-i18n="contact.kicker">{{ c.contact.kicker }}</span>
+      <h2 class="section-title" data-i18n="contact.title">{{ c.contact.title }}</h2>
+      <p class="lead" data-i18n="contact.text">{{ c.contact.text }}</p>
+
+      <div class="contact-main">
+        <a class="btn btn-primary" href="mailto:{{ site.email }}">{{ icon('mail') }}<span data-i18n="contact.email_button">{{ c.contact.email_button }}</span></a>
+        <button class="btn btn-soft" type="button" id="copy-email" data-email="{{ site.email }}">{{ icon('copy') }}<span data-i18n="contact.copy_email">{{ c.contact.copy_email }}</span></button>
+      </div>
+      <p class="email-text" dir="ltr">{{ site.email }}</p>
+
+      {# ✏️ Links come from site.json → links. Empty ones are hidden. #}
+      <ul class="socials">
+        {% for key in ['linkedin', 'github', 'cv'] %}
+        {% if site.links[key] %}
+        <li><a href="{{ site.links[key] }}" target="_blank" rel="noopener">{{ icon(key) }}<span data-i18n="contact.{{ key }}">{{ c.contact[key] }}</span></a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

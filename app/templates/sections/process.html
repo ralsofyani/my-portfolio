@@ -1,0 +1,27 @@
+{% from "macros.html" import section_head %}
+<section id="process" class="section">
+  <div class="container">
+    {{ section_head('process', c) }}
+
+    <ol class="steps">
+      {% for s in c.process.steps %}
+      <li class="step reveal">
+        <span class="step-num">{{ loop.index }}</span>
+        <h3 data-i18n="process.steps.{{ loop.index0 }}.title">{{ s.title }}</h3>
+        <p data-i18n="process.steps.{{ loop.index0 }}.text">{{ s.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <div class="notes-row">
+      <figure class="process-art reveal">
+        <img src="{{ site.images.process }}" alt="{{ c.process.image_alt }}" data-i18n-alt="process.image_alt" loading="lazy">
+      </figure>
+      <div class="stickies">
+        {% for n in c.process.notes %}
+        <p class="sticky reveal n{{ loop.index }}" data-i18n="process.notes.{{ loop.index0 }}">{{ n }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+{% from "macros.html" import icon %}
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">{{ c.meta.title }}</title>
+  <meta name="description" content="{{ c.meta.description }}" data-i18n-content="meta.description">
+  <meta name="theme-color" content="#F5FBFF">
+  <link rel="icon" href="{{ url_for('static', path='images/favicon.svg') }}?v={{ v }}" type="image/svg+xml">
+  <link rel="icon" href="{{ url_for('static', path='images/favicon-32.png') }}?v={{ v }}" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ url_for('static', path='images/apple-touch-icon.png') }}?v={{ v }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=El+Messiri:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}?v={{ v }}">
+</head>
+<body>
+  <a class="skip-link" href="#experience" data-i18n="nav.experience">{{ c.nav.experience }}</a>
+
+  {# Dreamy floating background #}
+  <div class="sky" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+  </div>
+
+  {# ───────── Navigation ───────── #}
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#hero">
+      <img class="brand-mark" src="{{ url_for('static', path='images/brand-mark.svg') }}?v={{ v }}" alt="" width="30" height="30">
+      <span data-i18n="name">{{ c.name }}</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      {% for s in nav %}
+      <li><a href="#{{ s }}" data-i18n="nav.{{ s }}">{{ c.nav[s] }}</a></li>
+      {% endfor %}
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-toggle" type="button" id="lang-toggle"
+              aria-label="{{ c.meta.switch_label }}" data-i18n-aria="meta.switch_label">
+        <span class="lang-dot"></span><span data-i18n="meta.switch_to">{{ c.meta.switch_to }}</span>
+      </button>
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="nav-links"
+              aria-label="{{ c.meta.menu }}" data-i18n-aria="meta.menu">{{ icon('menu') }}</button>
+    </div>
+  </nav>
+
+  <main>
+    {% for s in sections %}{% include "sections/" ~ s ~ ".html" %}
+    {% endfor %}
+  </main>
+
+  <footer class="footer">
+    <p class="muted">© {{ year }} <span data-i18n="name">{{ c.name }}</span> · <span data-i18n="footer.status">{{ c.footer.status }}</span> <span class="heart">♡</span></p>
+  </footer>
+
+  <a class="to-top" href="#hero" aria-label="{{ c.meta.back_to_top }}" data-i18n-aria="meta.back_to_top">{{ icon('up') }}</a>
+
+  <script id="i18n-data" type="application/json">{{ i18n | tojson }}</script>
+  <script src="{{ url_for('static', path='js/main.js') }}?v={{ v }}" defer></script>
+</body>
+</html>

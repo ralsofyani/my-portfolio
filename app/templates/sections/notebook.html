@@ -1,0 +1,39 @@
+{% from "macros.html" import icon, section_head %}
+<section id="notebook" class="section section-tinted">
+  <div class="container">
+    {{ section_head('notebook', c) }}
+
+    <div class="nb reveal" dir="ltr">
+      <div class="nb-bar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="nb-file">{{ notebook.filename }}</span>
+        <span class="nb-kernel"><span class="kernel-dot" id="kernel-dot"></span>{{ notebook.kernel }} · <span id="kernel-state" data-i18n="notebook.kernel_idle">{{ c.notebook.kernel_idle }}</span></span>
+        <button class="btn btn-mini" type="button" id="run-all">{{ icon('play') }}<span data-i18n="notebook.run_all">{{ c.notebook.run_all }}</span></button>
+      </div>
+
+      <div class="nb-cells">
+        {% set ns = namespace(n=0) %}
+        {% for cell in notebook.cells %}
+        {% set t = c.notebook.cells[cell.id] %}
+        {% if cell.type == 'markdown' %}
+        <div class="cell md" dir="{{ dir }}">
+          <h4 data-i18n="notebook.cells.{{ cell.id }}.title">{{ t.title }}</h4>
+          <p data-i18n="notebook.cells.{{ cell.id }}.text">{{ t.text }}</p>
+        </div>
+        {% else %}
+        {% set ns.n = ns.n + 1 %}
+        <div class="cell code" data-cell="{{ cell.id }}">
+          <div class="cell-head">
+            <span class="prompt">In [<span class="count">&nbsp;</span>]:</span>
+            <span class="caption" dir="{{ dir }}" data-i18n="notebook.cells.{{ cell.id }}.caption">{{ t.caption }}</span>
+            <button class="run" type="button" data-run="{{ cell.id }}">{{ icon('play') }}<span data-i18n="notebook.run">{{ c.notebook.run }}</span></button>
+          </div>
+          <pre><code class="py">{{ cell.code }}</code></pre>
+          <div class="output" aria-live="polite" hidden></div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

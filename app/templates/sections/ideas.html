@@ -1,0 +1,26 @@
+{# "What should I explore today?" — ideas live in content/learning_ideas.json, served at /api/learning-ideas #}
+<section id="ideas" class="section ideas-section">
+  <div class="container">
+    <div class="ideas-wrap reveal">
+      <header class="ideas-head">
+        <h2 class="section-title" data-i18n="ideas.title">{{ c.ideas.title }}</h2>
+        <p class="lead" data-i18n="ideas.intro">{{ c.ideas.intro }}</p>
+      </header>
+
+      <article class="idea-card" id="idea-card" aria-live="polite">
+        <div class="idea-top">
+          <span class="idea-topic" id="idea-topic">{{ first_idea.topic[lang] }}</span>
+          <span class="idea-count" id="idea-count"></span>
+        </div>
+        <h3 class="idea-title" id="idea-title">{{ first_idea[lang].title }}</h3>
+        <p class="idea-text" id="idea-text">{{ first_idea[lang].text }}</p>
+      </article>
+
+      <div class="idea-actions">
+        <button class="btn btn-primary" type="button" id="idea-next" disabled>
+          <span class="idea-spark" aria-hidden="true">✦</span><span data-i18n="ideas.button">{{ c.ideas.button }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+
+<section id="creative" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="kicker" data-i18n="creative.kicker">{{ c.creative.kicker }}</span>
+      <h2 class="section-title" data-i18n="creative.title">{{ c.creative.title }}</h2>
+      {% for para in c.creative.paragraphs %}
+      <p class="lead" data-i18n="creative.paragraphs.{{ loop.index0 }}">{{ para }}</p>
+      {% endfor %}
+    </header>
+
+    <div class="gallery">
+      {# 🖼 Replace artworks: site.json → artworks (titles in ar.json / en.json → creative.artworks) #}
+      {% for a in site.artworks %}
+      {% set t = c.creative.artworks[a.id] %}
+      <figure class="polaroid reveal p{{ loop.index }}">
+        <img src="{{ a.image }}" alt="{{ t.title }}" data-i18n-alt="creative.artworks.{{ a.id }}.title" loading="lazy">
+        <figcaption>
+          <span class="art-title" data-i18n="creative.artworks.{{ a.id }}.title">{{ t.title }}</span>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{% from "macros.html" import section_head %}
+<section id="about" class="section">
+  <div class="container">
+    {{ section_head('about', c) }}
+    <div class="about-grid">
+      <figure class="about-art reveal">
+        {# 🖼 Replace: site.json → images.about #}
+        <img src="{{ site.images.about }}" alt="{{ c.about.image_alt }}" data-i18n-alt="about.image_alt" loading="lazy">
+      </figure>
+      <div class="about-text">
+        {% for p in c.about.paragraphs %}
+        <p class="reveal{% if loop.last %} about-punch{% endif %}" data-i18n="about.paragraphs.{{ loop.index0 }}">{{ p }}</p>
+        {% endfor %}
+        <blockquote class="quote reveal"><span data-i18n="about.quote">{{ c.about.quote }}</span></blockquote>
+      </div>
+    </div>
+    <div class="facts">
+      {% for f in c.about.facts %}
+      <article class="fact card reveal tint-{{ loop.index }}">
+        <span class="fact-label" data-i18n="about.facts.{{ loop.index0 }}.label">{{ f.label }}</span>
+        <p data-i18n="about.facts.{{ loop.index0 }}.text">{{ f.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

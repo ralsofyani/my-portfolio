@@ -1,0 +1,47 @@
+{
+  "_note": "Professional experience. 'title' (official job title) and 'period' (e.g. \"2024 — present\") are optional placeholders: leave empty to hide. 'areas' lists the functional areas shown on the page, in order — their text lives in ar.json / en.json → experience.areas. Confirmed achievements go in ar.json / en.json → experience.highlights (hidden while empty). Keep everything public-safe.",
+  "period": "",
+  "areas": [
+    {
+      "id": "transfer-i2i"
+    },
+    {
+      "id": "transfer-e2i"
+    },
+    {
+      "id": "labor-app"
+    },
+    {
+      "id": "absent"
+    },
+    {
+      "id": "contracts"
+    },
+    {
+      "id": "marketplace"
+    },
+    {
+      "id": "wps"
+    },
+    {
+      "id": "payfort"
+    },
+    {
+      "id": "vip"
+    }
+  ],
+  "title": "",
+  "_todo": "To clarify before publishing: the package you called 'ساب بكج' (not shown on the page yet), and whether scheduled/queued jobs belong under Musaned specifically.",
+  "stack": [
+    "PHP",
+    "Laravel",
+    "REST APIs",
+    "SQL",
+    "PHPUnit",
+    "GitLab",
+    "Sentry",
+    "OpenSearch",
+    "Instana",
+    "kubectl"
+  ]
+}

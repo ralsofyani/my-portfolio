@@ -1,0 +1,17 @@
+{% from "macros.html" import icon %}
+<section id="teaching" class="section teaching-section">
+  <div class="container">
+    {# A small personal story — text: ar.json / en.json → teaching · video link: site.json → links.teaching_video #}
+    <article class="card teach-card reveal">
+      <span class="kicker" data-i18n="teaching.kicker">{{ c.teaching.kicker }}</span>
+      <h2 class="section-title" data-i18n="teaching.title">{{ c.teaching.title }}</h2>
+      {% for p in c.teaching.paragraphs %}
+      <p data-i18n="teaching.paragraphs.{{ loop.index0 }}">{{ p }}</p>
+      {% endfor %}
+      <div class="teach-actions">
+        <a class="btn btn-soft" href="{{ site.links.teaching_video }}" target="_blank" rel="noopener">{{ icon('youtube') }}<span data-i18n="teaching.button">{{ c.teaching.button }}</span></a>
+        <span class="teach-note" data-i18n="teaching.warning">{{ c.teaching.warning }}</span>
+      </div>
+    </article>
+  </div>
+</section>

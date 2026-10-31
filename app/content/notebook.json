@@ -1,0 +1,21 @@
+{
+  "_note": "Cells for the notebook section. Code cells with a 'runner' are executed by a safe, predefined Python function in app/routers/api.py (no arbitrary code runs). Captions and markdown text live in ar.json / en.json under notebook.cells.<id>.",
+  "kernel": "Python 3.12 · FastAPI",
+  "filename": "learning_journal.ipynb",
+  "cells": [
+    {
+      "id": "note-start",
+      "type": "markdown"
+    },
+    {
+      "id": "explore",
+      "type": "code",
+      "runner": "todays_adventure",
+      "code": "import random\n\nideas = load_ideas(\"notes/someday.md\")\nprint(\"Today I'll explore:\", random.choice(ideas))"
+    },
+    {
+      "id": "note-end",
+      "type": "markdown"
+    }
+  ]
+}

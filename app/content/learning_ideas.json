@@ -1,0 +1,455 @@
+{
+  "_note": "The 30 ideas for the 'What should I explore today?' card. Served by FastAPI at GET /api/learning-ideas. Add, edit or remove entries freely — keep 'id' unique and fill both 'ar' and 'en'.",
+  "ideas": [
+    {
+      "id": "py-comprehensions",
+      "topic": {
+        "ar": "Python",
+        "en": "Python"
+      },
+      "ar": {
+        "title": "من حلقة إلى list comprehension",
+        "text": "أعد كتابة حلقة for في كود قديم باستخدام list comprehension وقارن الوضوح والسرعة بـ timeit."
+      },
+      "en": {
+        "title": "From loop to list comprehension",
+        "text": "Rewrite a for-loop in old code as a list comprehension then compare readability and speed with timeit."
+      }
+    },
+    {
+      "id": "py-dataclasses",
+      "topic": {
+        "ar": "Python",
+        "en": "Python"
+      },
+      "ar": {
+        "title": "dataclass بدل القاموس",
+        "text": "حوّل قاموسًا يتنقّل بين عدة دوال إلى dataclass بأنواع واضحة ولاحظ كيف تتحسّن قراءة الكود."
+      },
+      "en": {
+        "title": "A dataclass instead of a dict",
+        "text": "Turn a dictionary that travels between several functions into a typed dataclass and notice how the code reads."
+      }
+    },
+    {
+      "id": "fastapi-validation",
+      "topic": {
+        "ar": "FastAPI",
+        "en": "FastAPI"
+      },
+      "ar": {
+        "title": "تحقّق من المدخلات بـ Pydantic",
+        "text": "ابنِ endpoint يستقبل JSON ويتحقق منه بنموذج Pydantic ثم أرسل بيانات خاطئة وشاهد رسالة الخطأ."
+      },
+      "en": {
+        "title": "Validate input with Pydantic",
+        "text": "Build an endpoint that accepts JSON validated by a Pydantic model then send bad data and read the error it returns."
+      }
+    },
+    {
+      "id": "fastapi-depends",
+      "topic": {
+        "ar": "FastAPI",
+        "en": "FastAPI"
+      },
+      "ar": {
+        "title": "حقن الاعتماديات بـ Depends",
+        "text": "استخدم Depends لتمرير الإعدادات أو اتصال قاعدة البيانات بدل المتغيرات العامة."
+      },
+      "en": {
+        "title": "Dependency injection with Depends",
+        "text": "Use Depends to pass settings or a database session into endpoints instead of relying on globals."
+      }
+    },
+    {
+      "id": "fastapi-docs",
+      "topic": {
+        "ar": "FastAPI",
+        "en": "FastAPI"
+      },
+      "ar": {
+        "title": "توثيق /docs يستحق القراءة",
+        "text": "أضف أوصافًا وأمثلة لكل endpoint في مشروعك حتى تصبح صفحة /docs مفيدة لمن لم يرَ الكود."
+      },
+      "en": {
+        "title": "Docs worth reading at /docs",
+        "text": "Add descriptions and examples to every endpoint so the /docs page is useful to someone who's never seen the code."
+      }
+    },
+    {
+      "id": "api-status-codes",
+      "topic": {
+        "ar": "REST APIs",
+        "en": "REST APIs"
+      },
+      "ar": {
+        "title": "رموز الحالة الصحيحة",
+        "text": "راجع API تعمل عليه وتأكد أن كل استجابة ترجع الرمز المناسب: 201 للإنشاء و404 لغير الموجود و422 للمدخلات الخاطئة."
+      },
+      "en": {
+        "title": "The right status codes",
+        "text": "Review an API you work on and make sure each response returns the right code: 201 for created, 404 for missing, 422 for invalid input."
+      }
+    },
+    {
+      "id": "api-pagination",
+      "topic": {
+        "ar": "REST APIs",
+        "en": "REST APIs"
+      },
+      "ar": {
+        "title": "تقسيم النتائج إلى صفحات",
+        "text": "أضف pagination لقائمة طويلة مرة بـ limit/offset ومرة بـ cursor وقارن بين الطريقتين."
+      },
+      "en": {
+        "title": "Paginate a long list",
+        "text": "Add pagination to a long list once with limit/offset and once with a cursor and compare the two approaches."
+      }
+    },
+    {
+      "id": "api-idempotency",
+      "topic": {
+        "ar": "REST APIs",
+        "en": "REST APIs"
+      },
+      "ar": {
+        "title": "مفاتيح Idempotency",
+        "text": "اقرأ عن Idempotency keys وحدّد مكانًا في نظامك تمنع فيه تكرار عملية مثل الدفع أو إنشاء الطلب."
+      },
+      "en": {
+        "title": "Idempotency keys",
+        "text": "Read about idempotency keys and find a place in your system where they'd prevent a repeated payment or duplicate request."
+      }
+    },
+    {
+      "id": "sql-explain",
+      "topic": {
+        "ar": "SQL",
+        "en": "SQL"
+      },
+      "ar": {
+        "title": "اقرأ خطة الاستعلام",
+        "text": "شغّل EXPLAIN على استعلام بطيء وتحقّق هل يستخدم الفهرس فعلًا أم يفحص الجدول كاملًا."
+      },
+      "en": {
+        "title": "Read the query plan",
+        "text": "Run EXPLAIN on a slow query and check whether it really uses an index or scans the whole table."
+      }
+    },
+    {
+      "id": "sql-window",
+      "topic": {
+        "ar": "SQL",
+        "en": "SQL"
+      },
+      "ar": {
+        "title": "دوال النوافذ",
+        "text": "اكتب استعلامًا بـ ROW_NUMBER أو SUM() OVER لحساب ترتيب أو مجموع تراكمي دون استعلامات فرعية."
+      },
+      "en": {
+        "title": "Window functions",
+        "text": "Write a query with ROW_NUMBER or SUM() OVER to compute a ranking or running total without subqueries."
+      }
+    },
+    {
+      "id": "sql-transactions",
+      "topic": {
+        "ar": "SQL",
+        "en": "SQL"
+      },
+      "ar": {
+        "title": "المعاملات وحماية البيانات",
+        "text": "جرّب BEGIN وROLLBACK على بيانات تجريبية لتفهم متى تحمي المعاملة سلامة البيانات."
+      },
+      "en": {
+        "title": "Transactions that protect data",
+        "text": "Try BEGIN and ROLLBACK on test data to see exactly when a transaction keeps your data consistent."
+      }
+    },
+    {
+      "id": "laravel-form-request",
+      "topic": {
+        "ar": "Laravel",
+        "en": "Laravel"
+      },
+      "ar": {
+        "title": "Form Request أنظف",
+        "text": "انقل قواعد التحقق من الـ Controller إلى Form Request ولاحظ كيف يصبح الـ Controller أبسط."
+      },
+      "en": {
+        "title": "Cleaner Form Requests",
+        "text": "Move validation rules out of a controller into a Form Request and see how much simpler the controller gets."
+      }
+    },
+    {
+      "id": "laravel-queues",
+      "topic": {
+        "ar": "Laravel",
+        "en": "Laravel"
+      },
+      "ar": {
+        "title": "مهمة بطيئة إلى Queue",
+        "text": "حوّل مهمة بطيئة مثل إرسال بريد إلى Job في Queue وراقبها وهي تُنفَّذ في الخلفية."
+      },
+      "en": {
+        "title": "Move slow work to a queue",
+        "text": "Turn a slow task such as sending an email into a queued Job and watch it run in the background."
+      }
+    },
+    {
+      "id": "laravel-n-plus-one",
+      "topic": {
+        "ar": "Laravel",
+        "en": "Laravel"
+      },
+      "ar": {
+        "title": "اصطد مشكلة N+1",
+        "text": "فعّل تسجيل الاستعلامات في صفحة تعرض قائمة وابحث عن N+1 ثم حلّها بـ eager loading."
+      },
+      "en": {
+        "title": "Catch an N+1 problem",
+        "text": "Log the queries on a page that renders a list, find the N+1 and fix it with eager loading."
+      }
+    },
+    {
+      "id": "arch-adr",
+      "topic": {
+        "ar": "هندسة البرمجيات",
+        "en": "Software architecture"
+      },
+      "ar": {
+        "title": "سجل قرار معماري",
+        "text": "اكتب ADR قصيرًا لقرار تقني اتخذته مؤخرًا: السياق والقرار والبدائل التي استبعدتها."
+      },
+      "en": {
+        "title": "An architecture decision record",
+        "text": "Write a short ADR for a recent technical decision: the context, the decision and the alternatives you ruled out."
+      }
+    },
+    {
+      "id": "arch-request-flow",
+      "topic": {
+        "ar": "هندسة البرمجيات",
+        "en": "Software architecture"
+      },
+      "ar": {
+        "title": "ارسم رحلة طلب واحد",
+        "text": "ارسم مسار طلب واحد في نظامك من البداية للنهاية وحدّد النقاط التي قد يتعطل عندها."
+      },
+      "en": {
+        "title": "Draw one request's journey",
+        "text": "Sketch the path of a single request through your system end to end and mark where it could fail."
+      }
+    },
+    {
+      "id": "git-rebase",
+      "topic": {
+        "ar": "Git",
+        "en": "Git"
+      },
+      "ar": {
+        "title": "رتّب سجل الـ commits",
+        "text": "استخدم git rebase -i لدمج commits صغيرة وإعادة تسميتها قبل فتح Merge Request."
+      },
+      "en": {
+        "title": "Tidy your commit history",
+        "text": "Use git rebase -i to squash and reword small commits before opening a merge request."
+      }
+    },
+    {
+      "id": "gitlab-ci",
+      "topic": {
+        "ar": "GitLab CI",
+        "en": "GitLab CI"
+      },
+      "ar": {
+        "title": "اختبارات مع كل push",
+        "text": "أضف مرحلة في ‎.gitlab-ci.yml تشغّل الاختبارات تلقائيًا مع كل push وتفشل إذا فشل اختبار."
+      },
+      "en": {
+        "title": "Tests on every push",
+        "text": "Add a stage to .gitlab-ci.yml that runs your tests on every push and fails the pipeline when one fails."
+      }
+    },
+    {
+      "id": "debug-reproduce",
+      "topic": {
+        "ar": "تتبّع الأخطاء",
+        "en": "Debugging"
+      },
+      "ar": {
+        "title": "أعد إنتاج الخطأ أولًا",
+        "text": "اختر خطأً قديمًا واكتب أقصر خطوات تعيد إنتاجه قبل أن تلمس سطرًا من الكود."
+      },
+      "en": {
+        "title": "Reproduce it first",
+        "text": "Pick an old bug and write the shortest steps that reproduce it before touching a single line of code."
+      }
+    },
+    {
+      "id": "debug-bisect",
+      "topic": {
+        "ar": "تتبّع الأخطاء",
+        "en": "Debugging"
+      },
+      "ar": {
+        "title": "git bisect بدل التخمين",
+        "text": "استخدم git bisect لتحديد الـ commit الذي أدخل خطأً بدل البحث اليدوي."
+      },
+      "en": {
+        "title": "git bisect instead of guessing",
+        "text": "Use git bisect to pinpoint the commit that introduced a bug instead of hunting by hand."
+      }
+    },
+    {
+      "id": "test-first-test",
+      "topic": {
+        "ar": "الاختبارات",
+        "en": "Testing"
+      },
+      "ar": {
+        "title": "أول اختبار لدالة مهمة",
+        "text": "اكتب اختبارًا لدالة مهمة لا تملك اختبارات، يغطي حالة حدّية واحدة على الأقل."
+      },
+      "en": {
+        "title": "A first test for a key function",
+        "text": "Write a test for an important untested function that covers at least one edge case."
+      }
+    },
+    {
+      "id": "test-fixtures",
+      "topic": {
+        "ar": "الاختبارات",
+        "en": "Testing"
+      },
+      "ar": {
+        "title": "fixtures في pytest",
+        "text": "حوّل إعدادًا متكررًا في اختباراتك إلى fixture في pytest واستخدمه في أكثر من اختبار."
+      },
+      "en": {
+        "title": "pytest fixtures",
+        "text": "Turn repeated setup code in your tests into a pytest fixture and reuse it across tests."
+      }
+    },
+    {
+      "id": "docker-multistage",
+      "topic": {
+        "ar": "Docker",
+        "en": "Docker"
+      },
+      "ar": {
+        "title": "صورة Docker أصغر",
+        "text": "اكتب Dockerfile لتطبيق FastAPI صغير ثم قلّل حجم الصورة باستخدام multi-stage build."
+      },
+      "en": {
+        "title": "A smaller Docker image",
+        "text": "Write a Dockerfile for a small FastAPI app then shrink the image with a multi-stage build."
+      }
+    },
+    {
+      "id": "k8s-pod",
+      "topic": {
+        "ar": "Kubernetes",
+        "en": "Kubernetes"
+      },
+      "ar": {
+        "title": "افهم حالة Pod",
+        "text": "على cluster محلي مثل kind، انشر Pod ثم اقرأ kubectl describe وkubectl logs لتفهم ما يحدث له."
+      },
+      "en": {
+        "title": "Understand a Pod's state",
+        "text": "On a local cluster like kind, deploy a Pod then read kubectl describe and kubectl logs to see what's happening to it."
+      }
+    },
+    {
+      "id": "obs-structured-logs",
+      "topic": {
+        "ar": "المراقبة",
+        "en": "Observability"
+      },
+      "ar": {
+        "title": "سجلات منظّمة",
+        "text": "حوّل سجلات نصية إلى JSON بحقول مثل request_id وجرّب تتبّع طلب واحد عبرها."
+      },
+      "en": {
+        "title": "Structured logs",
+        "text": "Turn plain-text logs into JSON with fields like request_id then try following one request through them."
+      }
+    },
+    {
+      "id": "data-pandas",
+      "topic": {
+        "ar": "تحليل البيانات",
+        "en": "Data analysis"
+      },
+      "ar": {
+        "title": "ثلاث ملاحظات من ملف CSV",
+        "text": "حمّل ملف CSV في pandas ونظّف القيم الناقصة واستخرج ثلاث ملاحظات باستخدام groupby."
+      },
+      "en": {
+        "title": "Three insights from a CSV",
+        "text": "Load a CSV into pandas, clean the missing values and pull out three insights with groupby."
+      }
+    },
+    {
+      "id": "jupyter-explainer",
+      "topic": {
+        "ar": "Jupyter",
+        "en": "Jupyter"
+      },
+      "ar": {
+        "title": "دفتر يشرح فكرة واحدة",
+        "text": "اكتب notebook يشرح مفهومًا واحدًا خطوة بخطوة: نص ثم كود ثم رسم بياني."
+      },
+      "en": {
+        "title": "A notebook that explains one idea",
+        "text": "Write a notebook that explains a single concept step by step: text then code then a chart."
+      }
+    },
+    {
+      "id": "ml-baseline",
+      "topic": {
+        "ar": "تعلّم الآلة",
+        "en": "Machine learning"
+      },
+      "ar": {
+        "title": "نموذج مقابل baseline",
+        "text": "درّب نموذج scikit-learn بسيطًا وقارن دقته بـ baseline ساذج قبل أن تحكم على أدائه."
+      },
+      "en": {
+        "title": "Model vs. baseline",
+        "text": "Train a simple scikit-learn model and compare it with a naive baseline before judging its accuracy."
+      }
+    },
+    {
+      "id": "aws-s3-notebook",
+      "topic": {
+        "ar": "AWS",
+        "en": "AWS"
+      },
+      "ar": {
+        "title": "من S3 إلى notebook",
+        "text": "ارفع dataset صغيرة إلى S3 واقرأها من notebook وتعرّف على صلاحيات IAM التي احتجتها."
+      },
+      "en": {
+        "title": "From S3 to a notebook",
+        "text": "Upload a small dataset to S3, read it from a notebook and note which IAM permissions you needed."
+      }
+    },
+    {
+      "id": "docs-readme",
+      "topic": {
+        "ar": "التوثيق",
+        "en": "Documentation"
+      },
+      "ar": {
+        "title": "README يجيب عن ثلاثة أسئلة",
+        "text": "أعد كتابة README لمشروع لديك ليجيب بوضوح: ماذا يفعل؟ كيف أشغّله؟ ولماذا صُمّم هكذا؟"
+      },
+      "en": {
+        "title": "A README that answers three questions",
+        "text": "Rewrite a project's README so it clearly answers: what does it do, how do I run it and why is it built this way?"
+      }
+    }
+  ]
+}

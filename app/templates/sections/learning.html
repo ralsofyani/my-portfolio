@@ -1,0 +1,21 @@
+{% from "macros.html" import icon, section_head %}
+<section id="learning" class="section">
+  <div class="container">
+    {{ section_head('learning', c) }}
+    <div class="skills-grid">
+      {% for d in c.learning.doing %}
+      {# ✏️ Skills and their levels: ar.json / en.json → learning.doing (level: core | worked | previous | exploring | practice) #}
+      {% set i = loop.index0 %}
+      <article class="card skill reveal level-{{ d.level }} tint-{{ (loop.index0 % 4) + 1 }}">
+        <div class="skill-top">
+          <span class="skill-icon">{{ icon(d.icon) }}</span>
+          <span class="skill-level lv-{{ d.level }}" data-i18n="learning.levels.{{ d.level }}">{{ c.learning.levels[d.level] }}</span>
+        </div>
+        <h3 data-i18n="learning.doing.{{ loop.index0 }}.title">{{ d.title }}</h3>
+        {% if d['items'] %}<ul class="tags skill-tags">{% for it in d['items'] %}<li data-i18n="learning.doing.{{ i }}.items.{{ loop.index0 }}">{{ it }}</li>{% endfor %}</ul>{% endif %}
+        <p data-i18n="learning.doing.{{ loop.index0 }}.text">{{ d.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

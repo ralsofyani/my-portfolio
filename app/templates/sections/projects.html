@@ -1,0 +1,62 @@
+{% from "macros.html" import icon, section_head %}
+<section id="projects" class="section section-tinted">
+  <div class="container">
+    {{ section_head('projects', c) }}
+
+    <div class="filters reveal" role="group" aria-label="Filter">
+      <button class="chip is-active" type="button" data-filter="all" data-i18n="projects.filters.all">{{ c.projects.filters.all }}</button>
+      {% for s in statuses %}
+      {% if projects | selectattr('status', 'equalto', s) | list %}
+      <button class="chip" type="button" data-filter="{{ s }}" data-i18n="projects.filters.{{ s }}">{{ c.projects.filters[s] }}</button>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="project-grid">
+      {# ✏️ Projects: content/projects.json — their story text: ar.json / en.json → projects.items.<id> #}
+      {% for p in projects %}
+      {% set t = c.projects['items'][p.id] %}
+      {% set L = c.projects.labels %}
+      <article class="card project reveal{% if not p.image %} no-media{% endif %}" data-status="{{ p.status }}">
+        {% if p.image %}
+        <div class="project-media"><img src="{{ p.image }}" alt="" loading="lazy"></div>
+        {% endif %}
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-cat" data-i18n="projects.items.{{ p.id }}.category">{{ t.category }}</span>
+            <span class="status status-{{ p.status }}" data-i18n="projects.filters.{{ p.status }}">{{ c.projects.filters[p.status] }}</span>
+          </div>
+          <h3 data-i18n="projects.items.{{ p.id }}.title">{{ t.title }}</h3>
+
+          <dl class="story-list">
+            <dt data-i18n="projects.labels.context">{{ L.context }}</dt>
+            <dd data-i18n="projects.items.{{ p.id }}.context">{{ t.context }}</dd>
+            {% if t.contribution %}
+            <dt data-i18n="projects.labels.contribution">{{ L.contribution }}</dt>
+            <dd data-i18n="projects.items.{{ p.id }}.contribution">{{ t.contribution }}</dd>
+            {% endif %}
+            {% if t.challenge %}
+            <dt data-i18n="projects.labels.challenge">{{ L.challenge }}</dt>
+            <dd data-i18n="projects.items.{{ p.id }}.challenge">{{ t.challenge }}</dd>
+            {% endif %}
+          </dl>
+
+          {% if p.stack or p.stack_learning %}
+          <ul class="tags">
+            {% for tag in p.stack %}<li>{{ tag }}</li>{% endfor %}
+            {% for tag in p.stack_learning or [] %}<li class="tag-learning">{{ tag }} · <span data-i18n="projects.labels.learning_tag">{{ c.projects.labels.learning_tag }}</span></li>{% endfor %}
+          </ul>
+          {% endif %}
+          {% if p.links.live or p.links.code %}
+          <div class="project-links">
+            {% if p.links.live %}<a href="{{ p.links.live }}" target="_blank" rel="noopener">{{ icon('link') }}<span data-i18n="projects.link_live">{{ c.projects.link_live }}</span></a>{% endif %}
+            {% if p.links.code %}<a href="{{ p.links.code }}" target="_blank" rel="noopener">{{ icon('github') }}<span data-i18n="projects.link_code">{{ c.projects.link_code }}</span></a>{% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="empty-note" hidden data-i18n="projects.empty">{{ c.projects.empty }}</p>
+  </div>
+</section>

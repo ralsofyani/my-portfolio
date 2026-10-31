@@ -1,0 +1,39 @@
+{
+  "_note": "Everything personal lives here: name, links, and image paths. Edit freely. Empty links are hidden automatically. links.teaching_video is the YouTube video for the teaching story.",
+  "default_language": "ar",
+  "name": {
+    "ar": "روان",
+    "en": "Rawan"
+  },
+  "email": "rawanalsofyan@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/rawan-mohammed-alsofyani/",
+    "github": "https://github.com/ralsofyani",
+    "teaching_video": "https://youtu.be/KAiKDisdKqw",
+    "cv": "/static/files/Rawan_Alsofyani_CV.pdf"
+  },
+  "images": {
+    "profile": "/static/images/roro.png",
+    "about": "/static/images/sections/about.svg",
+    "creative": "/static/images/sections/creative.svg",
+    "process": "/static/images/sections/process.svg"
+  },
+  "artworks": [
+    {
+      "id": "art-1",
+      "image": "/static/images/artwork/portrait.jpg"
+    },
+    {
+      "id": "art-2",
+      "image": "/static/images/artwork/3d-wrapper.jpg"
+    },
+    {
+      "id": "art-3",
+      "image": "/static/images/artwork/eye.jpg"
+    },
+    {
+      "id": "art-4",
+      "image": "/static/images/artwork/3d-snack.jpg"
+    }
+  ]
+}

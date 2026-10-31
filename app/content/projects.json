@@ -1,0 +1,49 @@
+{
+  "_note": "Projects for the 'From Ideas to Systems' section. status: professional | analysis | in_progress | experiment | finished. 'image' is optional (leave empty for confidential work). 'stack' lists technologies; leave it empty if you'd rather not list them. All text (category, context, contribution, challenge) lives in ar.json / en.json under projects.items.<id>. 'stack_learning' lists technologies you're still learning in that project (shown with a 'learning' tag).",
+  "projects": [
+    {
+      "id": "owan",
+      "status": "in_progress",
+      "image": "",
+      "stack": [
+        "PHP",
+        "Laravel"
+      ],
+      "links": {
+        "live": "",
+        "code": ""
+      },
+      "stack_learning": [
+        "React Native"
+      ]
+    },
+    {
+      "id": "security-scanner",
+      "status": "experiment",
+      "image": "",
+      "stack": [
+        "PHP",
+        "Laravel"
+      ],
+      "links": {
+        "live": "",
+        "code": ""
+      }
+    },
+    {
+      "id": "portfolio",
+      "status": "finished",
+      "image": "",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Jinja2",
+        "JavaScript"
+      ],
+      "links": {
+        "live": "",
+        "code": "https://github.com/your-handle/my-portfolio"
+      }
+    }
+  ]
+}
