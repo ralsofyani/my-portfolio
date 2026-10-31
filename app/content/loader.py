@@ -50,7 +50,7 @@ def credentials() -> dict[str, Any]:
 def normalize_lang(lang: str | None) -> str:
     if lang in LANGUAGES:
         return lang  # type: ignore[return-value]
-    return site().get("default_language", "ar")
+    return site().get("default_language", "en")
 
 
 def copy(lang: str) -> dict[str, Any]:

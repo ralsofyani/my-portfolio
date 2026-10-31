@@ -58,9 +58,10 @@ def test_home_page_renders_in_both_languages(lang, direction):
         assert f'id="{section}"' in res.text
 
 
-def test_default_language_is_arabic_and_unknown_falls_back():
-    assert 'lang="ar"' in client.get("/").text
-    assert 'lang="ar"' in client.get("/?lang=fr").text
+def test_default_language_is_english_and_unknown_falls_back():
+    assert 'lang="en" dir="ltr"' in client.get("/").text
+    assert 'lang="en"' in client.get("/?lang=fr").text
+    assert 'lang="ar" dir="rtl"' in client.get("/?lang=ar").text
 
 
 def test_youtube_link_is_on_the_page():

@@ -3,7 +3,7 @@
 > كلما ظننت أنني فهمت وجدت ما يستحق أن أتعلّمه
 > *Every time I think I understand I find something worth learning.*
 
-A bilingual **single-page** personal portfolio (Arabic first, English second), built with **Python + FastAPI**.
+A bilingual **single-page** personal portfolio in English and Arabic, built with **Python + FastAPI**.
 All the text, links and images come from JSON files, so updating the content never means touching HTML.
 
 ---
@@ -22,7 +22,8 @@ pip install -e ".[dev]"
 uvicorn app.main:app --reload
 ```
 
-Open <http://127.0.0.1:8000>. Arabic is the default. Use the toggle button or `/?lang=en`.
+Open <http://127.0.0.1:8000>. English is the default. Use the toggle button or `/?lang=ar` for Arabic.
+The browser remembers the last language a visitor chose, so if you switched before, press the toggle once to go back.
 The auto-generated API docs are at <http://127.0.0.1:8000/docs>.
 
 If the page ever looks out of date, press **⌘ + Shift + R** in the browser, or stop the server (Ctrl + C) and start it again.
@@ -97,6 +98,7 @@ my-portfolio/
 
 | Field | What it is |
 |---|---|
+| `default_language` | The language a first-time visitor sees: `"en"` (current) or `"ar"` |
 | `name.ar` / `name.en` | Your name in each language |
 | `email` | Used by "Write to me" and "Copy email" |
 | `links.linkedin` / `links.github` | Professional links |
