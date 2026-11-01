@@ -36,6 +36,30 @@ pytest
 
 ---
 
+## Deploy (Render Static Site)
+
+The live site is a **static build**: FastAPI renders the page once at build time and `freeze.py`
+writes everything into `dist/`. No server runs in production, so the site never sleeps.
+
+```bash
+python freeze.py      # builds dist/ locally if you want to check it
+```
+
+`dist/` contains `index.html`, `static/`, `favicon.ico` and `api/learning-ideas.json`
+(the ideas card reads this file on the static site, and `/api/learning-ideas` when running with uvicorn).
+`dist/` is in `.gitignore`; Render builds it on every push.
+
+| Render setting | Value |
+|---|---|
+| Service type | Static Site |
+| Branch | `main` |
+| Root Directory | *(empty)* |
+| Build Command | `pip install ".[dev]" && python freeze.py` |
+| Publish Directory | `dist` |
+| Environment variable | `PYTHON_VERSION` = `3.14.8` |
+
+---
+
 ## Page sections (top to bottom)
 
 | # | Section | Template | Text key |

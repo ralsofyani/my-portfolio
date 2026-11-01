@@ -9,7 +9,7 @@
       },
       "ar": {
         "title": "من حلقة إلى list comprehension",
-        "text": "أعد كتابة حلقة for في كود قديم باستخدام list comprehension وقارن الوضوح والسرعة بـ timeit."
+        "text": "أعد كتابة حلقة for في كود قديم باستخدام list comprehension وقارن الوضوح والسرعة بـ timeit"
       },
       "en": {
         "title": "From loop to list comprehension",
@@ -24,7 +24,7 @@
       },
       "ar": {
         "title": "dataclass بدل القاموس",
-        "text": "حوّل قاموسًا يتنقّل بين عدة دوال إلى dataclass بأنواع واضحة ولاحظ كيف تتحسّن قراءة الكود."
+        "text": "حوّل قاموسًا يتنقّل بين عدة دوال إلى dataclass بأنواع واضحة ولاحظ كيف تتحسّن قراءة الكود"
       },
       "en": {
         "title": "A dataclass instead of a dict",
@@ -39,7 +39,7 @@
       },
       "ar": {
         "title": "تحقّق من المدخلات بـ Pydantic",
-        "text": "ابنِ endpoint يستقبل JSON ويتحقق منه بنموذج Pydantic ثم أرسل بيانات خاطئة وشاهد رسالة الخطأ."
+        "text": "ابنِ endpoint يستقبل JSON ويتحقق منه بنموذج Pydantic ثم أرسل بيانات خاطئة وشاهد رسالة الخطأ"
       },
       "en": {
         "title": "Validate input with Pydantic",
@@ -54,7 +54,7 @@
       },
       "ar": {
         "title": "حقن الاعتماديات بـ Depends",
-        "text": "استخدم Depends لتمرير الإعدادات أو اتصال قاعدة البيانات بدل المتغيرات العامة."
+        "text": "استخدم Depends لتمرير الإعدادات أو اتصال قاعدة البيانات بدل المتغيرات العامة"
       },
       "en": {
         "title": "Dependency injection with Depends",
@@ -69,7 +69,7 @@
       },
       "ar": {
         "title": "توثيق /docs يستحق القراءة",
-        "text": "أضف أوصافًا وأمثلة لكل endpoint في مشروعك حتى تصبح صفحة /docs مفيدة لمن لم يرَ الكود."
+        "text": "أضف أوصافًا وأمثلة لكل endpoint في مشروعك حتى تصبح صفحة /docs مفيدة لمن لم يرَ الكود"
       },
       "en": {
         "title": "Docs worth reading at /docs",
@@ -84,7 +84,7 @@
       },
       "ar": {
         "title": "رموز الحالة الصحيحة",
-        "text": "راجع API تعمل عليه وتأكد أن كل استجابة ترجع الرمز المناسب: 201 للإنشاء و404 لغير الموجود و422 للمدخلات الخاطئة."
+        "text": "راجع API تعمل عليه وتأكد أن كل استجابة ترجع الرمز المناسب: 201 للإنشاء و404 لغير الموجود و422 للمدخلات الخاطئة"
       },
       "en": {
         "title": "The right status codes",
@@ -99,7 +99,7 @@
       },
       "ar": {
         "title": "تقسيم النتائج إلى صفحات",
-        "text": "أضف pagination لقائمة طويلة مرة بـ limit/offset ومرة بـ cursor وقارن بين الطريقتين."
+        "text": "أضف pagination لقائمة طويلة مرة بـ limit/offset ومرة بـ cursor وقارن بين الطريقتين"
       },
       "en": {
         "title": "Paginate a long list",
@@ -114,7 +114,7 @@
       },
       "ar": {
         "title": "مفاتيح Idempotency",
-        "text": "اقرأ عن Idempotency keys وحدّد مكانًا في نظامك تمنع فيه تكرار عملية مثل الدفع أو إنشاء الطلب."
+        "text": "اقرأ عن Idempotency keys وحدّد مكانًا في نظامك تمنع فيه تكرار عملية مثل الدفع أو إنشاء الطلب"
       },
       "en": {
         "title": "Idempotency keys",
@@ -129,7 +129,7 @@
       },
       "ar": {
         "title": "اقرأ خطة الاستعلام",
-        "text": "شغّل EXPLAIN على استعلام بطيء وتحقّق هل يستخدم الفهرس فعلًا أم يفحص الجدول كاملًا."
+        "text": "شغّل EXPLAIN على استعلام بطيء وتحقّق هل يستخدم الفهرس فعلًا أم يفحص الجدول كاملًا"
       },
       "en": {
         "title": "Read the query plan",
@@ -144,7 +144,7 @@
       },
       "ar": {
         "title": "دوال النوافذ",
-        "text": "اكتب استعلامًا بـ ROW_NUMBER أو SUM() OVER لحساب ترتيب أو مجموع تراكمي دون استعلامات فرعية."
+        "text": "اكتب استعلامًا بـ ROW_NUMBER أو SUM() OVER لحساب ترتيب أو مجموع تراكمي دون استعلامات فرعية"
       },
       "en": {
         "title": "Window functions",
@@ -159,7 +159,7 @@
       },
       "ar": {
         "title": "المعاملات وحماية البيانات",
-        "text": "جرّب BEGIN وROLLBACK على بيانات تجريبية لتفهم متى تحمي المعاملة سلامة البيانات."
+        "text": "جرّب BEGIN وROLLBACK على بيانات تجريبية لتفهم متى تحمي المعاملة سلامة البيانات"
       },
       "en": {
         "title": "Transactions that protect data",
@@ -174,7 +174,7 @@
       },
       "ar": {
         "title": "Form Request أنظف",
-        "text": "انقل قواعد التحقق من الـ Controller إلى Form Request ولاحظ كيف يصبح الـ Controller أبسط."
+        "text": "انقل قواعد التحقق من الـ Controller إلى Form Request ولاحظ كيف يصبح الـ Controller أبسط"
       },
       "en": {
         "title": "Cleaner Form Requests",
@@ -189,7 +189,7 @@
       },
       "ar": {
         "title": "مهمة بطيئة إلى Queue",
-        "text": "حوّل مهمة بطيئة مثل إرسال بريد إلى Job في Queue وراقبها وهي تُنفَّذ في الخلفية."
+        "text": "حوّل مهمة بطيئة مثل إرسال بريد إلى Job في Queue وراقبها وهي تُنفَّذ في الخلفية"
       },
       "en": {
         "title": "Move slow work to a queue",
@@ -204,7 +204,7 @@
       },
       "ar": {
         "title": "اصطد مشكلة N+1",
-        "text": "فعّل تسجيل الاستعلامات في صفحة تعرض قائمة وابحث عن N+1 ثم حلّها بـ eager loading."
+        "text": "فعّل تسجيل الاستعلامات في صفحة تعرض قائمة وابحث عن N+1 ثم حلّها بـ eager loading"
       },
       "en": {
         "title": "Catch an N+1 problem",
@@ -219,7 +219,7 @@
       },
       "ar": {
         "title": "سجل قرار معماري",
-        "text": "اكتب ADR قصيرًا لقرار تقني اتخذته مؤخرًا: السياق والقرار والبدائل التي استبعدتها."
+        "text": "اكتب ADR قصيرًا لقرار تقني اتخذته مؤخرًا: السياق والقرار والبدائل التي استبعدتها"
       },
       "en": {
         "title": "An architecture decision record",
@@ -234,7 +234,7 @@
       },
       "ar": {
         "title": "ارسم رحلة طلب واحد",
-        "text": "ارسم مسار طلب واحد في نظامك من البداية للنهاية وحدّد النقاط التي قد يتعطل عندها."
+        "text": "ارسم مسار طلب واحد في نظامك من البداية للنهاية وحدّد النقاط التي قد يتعطل عندها"
       },
       "en": {
         "title": "Draw one request's journey",
@@ -249,7 +249,7 @@
       },
       "ar": {
         "title": "رتّب سجل الـ commits",
-        "text": "استخدم git rebase -i لدمج commits صغيرة وإعادة تسميتها قبل فتح Merge Request."
+        "text": "استخدم git rebase -i لدمج commits صغيرة وإعادة تسميتها قبل فتح Merge Request"
       },
       "en": {
         "title": "Tidy your commit history",
@@ -264,7 +264,7 @@
       },
       "ar": {
         "title": "اختبارات مع كل push",
-        "text": "أضف مرحلة في ‎.gitlab-ci.yml تشغّل الاختبارات تلقائيًا مع كل push وتفشل إذا فشل اختبار."
+        "text": "أضف مرحلة في ‎.gitlab-ci.yml تشغّل الاختبارات تلقائيًا مع كل push وتفشل إذا فشل اختبار"
       },
       "en": {
         "title": "Tests on every push",
@@ -279,7 +279,7 @@
       },
       "ar": {
         "title": "أعد إنتاج الخطأ أولًا",
-        "text": "اختر خطأً قديمًا واكتب أقصر خطوات تعيد إنتاجه قبل أن تلمس سطرًا من الكود."
+        "text": "اختر خطأً قديمًا واكتب أقصر خطوات تعيد إنتاجه قبل أن تلمس سطرًا من الكود"
       },
       "en": {
         "title": "Reproduce it first",
@@ -294,7 +294,7 @@
       },
       "ar": {
         "title": "git bisect بدل التخمين",
-        "text": "استخدم git bisect لتحديد الـ commit الذي أدخل خطأً بدل البحث اليدوي."
+        "text": "استخدم git bisect لتحديد الـ commit الذي أدخل خطأً بدل البحث اليدوي"
       },
       "en": {
         "title": "git bisect instead of guessing",
@@ -309,7 +309,7 @@
       },
       "ar": {
         "title": "أول اختبار لدالة مهمة",
-        "text": "اكتب اختبارًا لدالة مهمة لا تملك اختبارات، يغطي حالة حدّية واحدة على الأقل."
+        "text": "اكتب اختبارًا لدالة مهمة لا تملك اختبارات، يغطي حالة حدّية واحدة على الأقل"
       },
       "en": {
         "title": "A first test for a key function",
@@ -324,7 +324,7 @@
       },
       "ar": {
         "title": "fixtures في pytest",
-        "text": "حوّل إعدادًا متكررًا في اختباراتك إلى fixture في pytest واستخدمه في أكثر من اختبار."
+        "text": "حوّل إعدادًا متكررًا في اختباراتك إلى fixture في pytest واستخدمه في أكثر من اختبار"
       },
       "en": {
         "title": "pytest fixtures",
@@ -339,7 +339,7 @@
       },
       "ar": {
         "title": "صورة Docker أصغر",
-        "text": "اكتب Dockerfile لتطبيق FastAPI صغير ثم قلّل حجم الصورة باستخدام multi-stage build."
+        "text": "اكتب Dockerfile لتطبيق FastAPI صغير ثم قلّل حجم الصورة باستخدام multi-stage build"
       },
       "en": {
         "title": "A smaller Docker image",
@@ -354,7 +354,7 @@
       },
       "ar": {
         "title": "افهم حالة Pod",
-        "text": "على cluster محلي مثل kind، انشر Pod ثم اقرأ kubectl describe وkubectl logs لتفهم ما يحدث له."
+        "text": "على cluster محلي مثل kind، انشر Pod ثم اقرأ kubectl describe وkubectl logs لتفهم ما يحدث له"
       },
       "en": {
         "title": "Understand a Pod's state",
@@ -369,7 +369,7 @@
       },
       "ar": {
         "title": "سجلات منظّمة",
-        "text": "حوّل سجلات نصية إلى JSON بحقول مثل request_id وجرّب تتبّع طلب واحد عبرها."
+        "text": "حوّل سجلات نصية إلى JSON بحقول مثل request_id وجرّب تتبّع طلب واحد عبرها"
       },
       "en": {
         "title": "Structured logs",
@@ -384,7 +384,7 @@
       },
       "ar": {
         "title": "ثلاث ملاحظات من ملف CSV",
-        "text": "حمّل ملف CSV في pandas ونظّف القيم الناقصة واستخرج ثلاث ملاحظات باستخدام groupby."
+        "text": "حمّل ملف CSV في pandas ونظّف القيم الناقصة واستخرج ثلاث ملاحظات باستخدام groupby"
       },
       "en": {
         "title": "Three insights from a CSV",
@@ -399,7 +399,7 @@
       },
       "ar": {
         "title": "دفتر يشرح فكرة واحدة",
-        "text": "اكتب notebook يشرح مفهومًا واحدًا خطوة بخطوة: نص ثم كود ثم رسم بياني."
+        "text": "اكتب notebook يشرح مفهومًا واحدًا خطوة بخطوة: نص ثم كود ثم رسم بياني"
       },
       "en": {
         "title": "A notebook that explains one idea",
@@ -414,7 +414,7 @@
       },
       "ar": {
         "title": "نموذج مقابل baseline",
-        "text": "درّب نموذج scikit-learn بسيطًا وقارن دقته بـ baseline ساذج قبل أن تحكم على أدائه."
+        "text": "درّب نموذج scikit-learn بسيطًا وقارن دقته بـ baseline ساذج قبل أن تحكم على أدائه"
       },
       "en": {
         "title": "Model vs. baseline",
@@ -429,7 +429,7 @@
       },
       "ar": {
         "title": "من S3 إلى notebook",
-        "text": "ارفع dataset صغيرة إلى S3 واقرأها من notebook وتعرّف على صلاحيات IAM التي احتجتها."
+        "text": "ارفع dataset صغيرة إلى S3 واقرأها من notebook وتعرّف على صلاحيات IAM التي احتجتها"
       },
       "en": {
         "title": "From S3 to a notebook",

@@ -20,8 +20,8 @@
     "troubleshooting": "Debugging"
   },
   "hero": {
-    "eyebrow": "Hi there, I'm",
-    "title": "Every time I think I understand I find something worth learning.",
+    "iam": "I'm",
+    "title": "There's always something new to learn and as long as the fun continues so does the passion",
     "subtitle": "I develop backend systems and build RESTful APIs, and I love understanding how things work behind the scenes. Sometimes I'm building a new feature and other times I'm tracking down a production bug. Either way I always find something new that I genuinely enjoy learning.",
     "badges": [
       "Laravel · REST APIs",
@@ -32,7 +32,7 @@
   },
   "learning": {
     "kicker": "Technical skills",
-    "title": "My skills at their real level",
+    "title": "My Skills",
     "doing": [
       {
         "icon": "api",
@@ -180,8 +180,8 @@
       },
       "portfolio": {
         "category": "Personal project",
-        "title": "This very site",
-        "context": "A bilingual personal site that represents me professionally and personally.",
+        "title": "This site",
+        "context": "A bilingual personal site that represents me professionally",
         "contribution": "Built with FastAPI and Jinja2 with content editable from JSON files, automated tests and an ideas generator served through an API.",
         "challenge": "One page with two languages and two reading directions that switch instantly without a reload."
       },
@@ -196,11 +196,10 @@
   },
   "creative": {
     "kicker": "The other side",
-    "title": "Rawan, the Artist",
+    "title": "The Art",
     "paragraphs": [
-      "Away from programming I also love to draw and sometimes I find myself paying more attention to one tiny detail than the entire piece!",
-      "Maybe that explains my relationship with frontend development. Although most of my work revolves around backend engineering, I still enjoy being part of the side people actually see (preferably without all those meetings!).",
-      "After all, making something work the way it should is just as satisfying to me as seeing it look the way I imagined."
+      "Away from programming I draw and I care about the small details, which might explain my relationship with the frontend because even though my work revolves around the backend I still like having a share of the side we actually see",
+      "Making something work the way it should is just as satisfying to me as making it look the way I imagined"
     ],
     "artworks": {
       "art-1": {
@@ -219,17 +218,16 @@
   },
   "teaching": {
     "kicker": "Sharing the journey",
-    "title": "When I Tried Teaching",
+    "title": "An Attempt at Explaining",
     "paragraphs": [
-      "At one point I decided to share what I knew with fellow university students with more enthusiasm than resources, a microphone that wasn't at its best and a voice that sometimes sounded like it was fighting sleep (which to be fair it probably was, just a university student trying her best!).",
-      "Looking back at those recordings makes me laugh at some of the details but I still appreciate the genuine desire to share what I knew even if the results weren't perfect.",
-      "I stopped recording but I never stopped loving the process of explaining things. I still enjoy simplifying ideas and sharing what I learn and I find that explaining something often helps me understand it more deeply."
+      "At one point I decided to share what I knew with university students, with more enthusiasm than resources, a microphone that wasn't at its best and a voice that sometimes sounded like it was fighting sleep (and the sleepiness was real by the way, just a university student doing her best)",
+      "Whenever I go back to those recordings some of the details make me cringe a little, but I still love the genuine wish to share what I knew even if the result wasn't perfect",
+      "I stopped recording but I never stopped loving to explain\nI still enjoy simplifying ideas and sharing what I learn with others, and explaining something often helps me understand it more deeply"
     ],
     "button": "Watch the attempt on YouTube",
     "warning": "Gentle warning: you may catch a yawn between explanations"
   },
   "contact": {
-    "kicker": "Say hi",
     "title": "Let's build something that works and learn while we build it",
     "text": "If your team builds real backend systems, has a technical problem that needs tracing to its root or an idea worth trying, I'd love to talk.",
     "email_button": "Write to me",
@@ -249,8 +247,8 @@
         "text": "Routine that never asks a single question."
       },
       {
-        "label": "Believes",
-        "text": "Structure and creativity were never rivals."
+        "label": "I Believe",
+        "text": "The joy of trying matters more than the outcome itself"
       }
     ]
   },
@@ -315,7 +313,7 @@
   "credentials": {
     "kicker": "Learning & credentials",
     "title": "Learning & Credentials",
-    "intro": "For me learning is an ongoing habit and not a phase. Here's what I've earned, what I'm working on now and what I'm building next.",
+    "intro": "Learning is an ongoing habit and not a phase (here's what I've earned and what I'm working on now)",
     "earned_title": "Earned certifications",
     "now_title": "Now",
     "now_status": "In progress",
@@ -324,16 +322,13 @@
       "Python",
       "Machine learning",
       "AWS machine learning services",
-      "Model development & deployment concepts",
-      "Practical projects that prove what I learn"
+      "Model development & deployment concepts"
     ],
-    "next_title": "Next",
-    "next_text": "Turning everything I learn into real working projects that anyone can see and try.",
     "verify": "Verify"
   },
   "troubleshooting": {
     "kicker": "Production & observability",
-    "title": "When a Production Bug Starts the Story",
+    "title": "When Things Go Wrong in Production",
     "intro": "My work doesn't end when a feature is delivered. I also investigate production issues by tracing errors, analyzing logs, monitoring application performance and identifying root causes. I enjoy this side of engineering because it reveals how systems actually behave beyond what we expect.",
     "flow_title": "Common investigation activities",
     "flow_note": "Not a fixed sequence. Each incident can start in a different place with a different tool.",

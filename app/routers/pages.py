@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 
 from fastapi import APIRouter, Query, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 from app.content import loader
@@ -54,3 +54,9 @@ async def index(request: Request, lang: str | None = Query(default=None)):
             "v": asset_version(),
         },
     )
+
+
+@router.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    """Some browsers (Safari especially) ask for /favicon.ico directly."""
+    return FileResponse(STATIC_DIR / "images" / "favicon-32.png", media_type="image/png")

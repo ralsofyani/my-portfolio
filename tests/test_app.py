@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -156,3 +158,21 @@ def test_experience_areas_have_no_status_badges():
         aside = html.split('class="exp-areas')[1].split("</aside>")[0]
         assert "area-status" not in aside
         assert aside.count('class="area"') == len(loader.experience()["areas"])
+
+
+def test_favicon_is_served_at_the_root():
+    res = client.get("/favicon.ico")
+    assert res.status_code == 200 and res.headers["content-type"] == "image/png"
+
+
+def test_freeze_builds_a_complete_static_site():
+    import freeze
+
+    freeze.main()
+    html = (freeze.DIST / "index.html").read_text(encoding="utf-8")
+    assert 'data-ideas-url="/api/learning-ideas.json"' in html
+    assert "http://testserver" not in html
+    assert (freeze.DIST / "static" / "css" / "style.css").exists()
+    assert (freeze.DIST / "favicon.ico").exists()
+    ideas = json.loads((freeze.DIST / "api" / "learning-ideas.json").read_text(encoding="utf-8"))
+    assert ideas["count"] == 30

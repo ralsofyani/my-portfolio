@@ -1,10 +1,12 @@
 <section id="hero" class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <p class="eyebrow reveal">
-        <span data-i18n="hero.eyebrow">{{ c.hero.eyebrow }}</span>
-        <span class="eyebrow-name" data-i18n="name">{{ c.name }}</span>
-      </p>
+      {# A tiny Python cell (same in both languages) → name → role #}
+      <div class="hero-cell reveal" dir="ltr" aria-label="Python">
+        <div class="cell-line"><span class="cell-prompt">In [1]:</span><code><span class="tok-fn">print</span>(<span class="tok-str">"Hello, World!"</span>)</code></div>
+        <div class="cell-line cell-out"><span class="cell-prompt">Out:</span><samp>Hello, World!</samp></div>
+      </div>
+      <p class="hero-name reveal"><span data-i18n="hero.iam">{{ c.hero.iam }}</span> <span class="eyebrow-name" data-i18n="name">{{ c.name }}</span></p>
       <p class="hero-role reveal" data-i18n="hero.role">{{ c.hero.role }}</p>
       <h1 class="hero-title reveal" data-i18n="hero.title">{{ c.hero.title }}</h1>
       <p class="hero-sub reveal" data-i18n="hero.subtitle">{{ c.hero.subtitle }}</p>

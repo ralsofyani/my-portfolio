@@ -41,9 +41,11 @@
 
   document.getElementById("lang-toggle").addEventListener("click", () => applyLanguage(lang === "ar" ? "en" : "ar"));
 
-  // Respect a remembered choice when the URL doesn't say otherwise.
+  // ?lang=… in the URL wins (also needed on the static build); otherwise respect a remembered choice.
+  const urlLang = new URLSearchParams(location.search).get("lang");
   const saved = store.get("lang");
-  if (!new URLSearchParams(location.search).has("lang") && saved && saved !== lang) applyLanguage(saved, { animate: false });
+  if (urlLang && I18N[urlLang]) { if (urlLang !== lang) applyLanguage(urlLang, { animate: false }); }
+  else if (saved && saved !== lang) applyLanguage(saved, { animate: false });
 
   /* ---------- Mobile menu ---------- */
   const menuBtn = document.getElementById("menu-toggle");
@@ -154,7 +156,7 @@
       render(true);
     };
 
-    fetch("/api/learning-ideas")
+    fetch(root.dataset.ideasUrl || "/api/learning-ideas")
       .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
       .then((data) => {
         byId = Object.fromEntries(data.ideas.map((i) => [i.id, i]));
